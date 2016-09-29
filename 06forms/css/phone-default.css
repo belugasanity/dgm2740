@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*-----Prevents iPhone from resizing in landscape mode -----*/
 html {-webkit-text-size-adjust: none; }
 
@@ -6,107 +7,85 @@ html {-webkit-text-size-adjust: none; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
-
 /*-----BODY -----*/
 body {
-	background-color: #feffc2;
-	font-size: 16px;
-	font-family: Verdana, Geneva, sans-serif;	
+  font-size: 16px;
+  font-family: 'Signika', sans-serif; 
+  font-weight: 300; /*also loaded 600 for bold*/
+  background-color:#fff;
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png");
 }
+
+
+
+
 
 
 /*-----CONTAINER -----*/
 #container {
-
-	min-width: 320px;
-	max-width: 1140px;
+  min-width: 320px;
+  max-width: 1140px;
+  background-color: #717171;
 }
+
+
+
 
 /*-----HEADER -----*/
-header {
-
-	}
-header div#logo {
-
+header {background-color: #969696;
+background: #969696;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f3f3f), color-stop(100%,#242424)); /*Android*/
+  background: -webkit-linear-gradient(top,  #f7f7f7 0%,#969696 100%); /*Safari, Chrome*/
+  background: -o-linear-gradient(top,  #f7f7f7 0%,#969696 100%); /*Opera on Windows*/
+  background: linear-gradient(to bottom, #f7f7f7 0%,#969696 100%);
 }
-header div#logo img {
-	width: 100%;
-	display: block; /*removes the nasty space below an image caused because an image is display: inline by default*/	
-}
-header h1 {
-	font-size: 1.4em; 
-	text-align: center; 
-	padding:.3em;
-	text-shadow: 0px 0px 2px #f6ff94;
-	}
-header h2 {
-	font-size: .9em; 
-	text-align: center; 
-	padding:.1em;
-	}
+
+
+/*-----DECORATIVE BAR -----*/
+div.decorativeWrapper{display:none;}
+
+
+
 
 /*-----NAVigation -----*/
 button#showPhoneNav {
-	color: #FFF;
-	font-weight:600;
-	display: block;
-	border: 1px  solid rgba(0,0,0,0.9);
-	border-radius: .75em;
-	margin: .3em 2%;
-	padding: .5em 0; 
-	width: 96%;
-	background-color: rgba(0,0,0,0.7);
+  color: #FFF;
+  font-weight:600;
+  display: block;
+  border: 1px #222 solid;
+  margin: 2% 0;
+  padding: .75em 0; 
+  width: 100%;
+  
+  background: #363636;
 }
-
-nav ul#myNav {
-	display: none;	
-	background-color: rgba(0,0,0,0.2);
-	padding: .5em 0;
-	margin-left: 2%;
-	width: 96%;
-}
-nav ul li a { /*main menu items*/
-font-size: .9em;
-	display:block;
-	padding: .4em;
-	margin: 0 .5em;
-	background-color:rgba(0,0,0,0.4);
-	color:#FFF;
-	text-decoration:none;
-	border: 1px solid rgba(0,0,0,0.5);
-	/*transition*/
-	-webkit-transition: background 0.2s linear; 
-	-moz-transition: background 0.2s linear; 
-	-o-transition: background 0.2s linear; 
-	transition: background 0.2s linear;
-	
-
-	}
-nav ul li a:hover, nav ul li a.active {
-	background-color:rgba(0,0,0,0.8);
-}
-	
-nav ul li ul li a { /*submenu menu items*/
-	border: none;
-	color: #FFF;
-	border-radius: 0;
-	text-align:left;
-	text-shadow:none;
-	padding: .4em .4em .4em .7em;
-	margin: 0 2em 0 1em;
-	background-color:transparent;
-	}
-nav ul li ul li a:hover, nav ul li ul li a.active {
-	background-color:transparent;
-	color:#30282a;
-}
-
-/*hilight the menu items*/
-body#diet li#diet, body#living li#living, body#mental li#mental {
-	background-color: #7d2a35;	
+ul#myNav {
+  display: none;  
 }
 
 
+nav ul { 
+  background-color: #363636; 
+  box-shadow: 0 0 5px #666;
+}
+
+nav ul li a {
+  display:block;
+  text-align:center;
+  padding: .6em;
+  border-top: 1px #cccccc solid;
+  color:#ccc;
+  text-decoration:none;
+  font-weight: 600;
+  
+}
+nav ul li:first-child a{
+  border-top: none;
+}
+
+nav ul li.selected a {
+  color: #0046eb; 
+}
 
 
 
@@ -114,116 +93,132 @@ body#diet li#diet, body#living li#living, body#mental li#mental {
 
 /*-----CONTENT -----*/
 #content {
-	min-height: 5em;
-	background-color: #fff;
+  min-height: 15em;
+  background-color: #e6e6e6;
 }
+#content article {
+  padding: .5em 2%; 
+}
+
 #content h1 {
-	padding: 1.5em 0em .5em 0em;
-	margin: 0 2%;
-	font-size: 1.4em;
-	border-bottom: #e84167 solid 2px; 
-	color: #30282a;
+  font-size: 1.5em;
+  font-weight:600;
+  color: #51a6af;
+  padding-top: 1.4em;
+  padding-left: .6em;
+  border-bottom: 2px solid #a4b9eb;
 }
 
-#content h3 {
-	padding: .5em .6em;
-	font-size: 1em;
-	color: #542733;		
+#content h2 { 
+  font-size: 1.3em;
+  font-weight:600;
+  color: #009edf;
+  padding-top: 1.1em;
 }
+
+#content h3 { 
+  font-size: 1.1em;
+  color: #009edf;
+  padding-top: .8em;
+}
+
 #content p {
-	padding: .5em 3% 0 2%;
-	font-size: .9em;
-	color: #333;
-	line-height: 1.4em;		
+  color: #333;
+  padding-top:.5em;
+  line-height:130%; 
 }
 
-/*-----COLUMNS -----*/
-aside.right div.ad {
-	width: 33.333%;
-	padding: 1.5%;
-	float: right;	
+#content a {
+  color: #0046eb; 
 }
-aside.right div.ad img {
-	width: 100%;
+
+#content strong {font-weight: 600;}
+
+#content ul li {
+  margin-left: 6%;
+  padding-bottom: .3em;
+  font-size: .9em;
+  list-style-type:square;
+  color: #444;
+  line-height: 120%;
 }
-aside.right h3 {
-	text-align: center;	
-	background-color: #b4ba6c;
+
+
+
+
+
+/*-----IMAGES -----*/
+figure.w50 img {width: 100%;}
+figure.w50 {
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #999; 
+  box-shadow: 2px 2px 5px rgba(63, 63, 63, 0.5);
+  margin-top:.5em;
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*----------------------- FORM STUFF ---------------------------*/
+figcaption {
+  text-align:center;
+  font-size:.7em;
+  padding: .3em;
+  }
+figure.right {float: right;}
+
+/* Form Styling */
 form#conference {
-	margin: 1em 3%;
+  margin: 1em 3%;
 }
 
 fieldset {
-	background-color: #e4dccf;	
-	border-radius: .8em;
-	margin: 1.5em 0;
-	border: #917a56 solid 1px;
-	
+    background-color: #bbd5d8;
+    margin: 1.5em 0;
+    border: #51a6af solid 1px;
+  
 }
 
 legend {
-	color: #7d2a35;
-	margin-left: 6%;
-	padding: .5em;
-	border: #917a56 solid 1px;
-	background-color: #f2eee7;
-	border-radius: .4em;
+    margin-left: 2%;
+    padding: .5em;
+    border: #51a6af solid 1px;
+    background-color: #bbd5d8;
 }
 
 /*this is the user instructions for each input. name,, address, email etc. */
 label {
-	display:block; /* forces a hard return and allows margin to be assigned*/
-	margin: .5em;
-	
+  display:block; /* forces a hard return and allows margin to be assigned*/
+  margin: .5em;
+  
 }
 
 label span {
-	display:block;
-	font-size:.8em;
-	color: #917a56;
-	padding-top: .9em;
-	padding-bottom: .2em;
+    display: block;
+    font-size: .8em;
+    color: #7b7b7b;
+    padding-top: .9em;
+    padding-bottom: .5em;
 }
 
 /*where the user enters their information*/
 label input {
-		background-color: #f4f2ef;
-		color: #917a56;
-		background-image:url(../images/ico_validation.png);
-		background-position:4px -11px; /*shows the grey box*/
-		background-repeat: no-repeat;
-		padding:.3em .3em .3em 2em;
-		border: solid 1px #b0aaa0;
-		border-radius: 5px;
-		font-size:.9em;
-		width: 90%;
-		max-width: 500px;
+    background-color: #f4f2ef;
+    color: #3a3a3a;
+    background-image: url(../img/validation_sprites.png);
+    background-position: 4px -11px;
+    background-repeat: no-repeat;
+    padding: .3em .3em .3em 2em;
+    border: solid 1px #51a6af;
+    font-size: .9em;
+    width: 90%;
+    max-width: 500px;
 }
 
 /*The input that currently has the focus*/
 input:focus {
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.5) inset;	
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5) inset;  
 }
 
 /*identifies all required fields*/
 input:required {
-	background-position:4px -61px; /*shows the red star*/
+  background-position:4px -61px; /*shows the red star*/
 }
 
 /*Validation*/
@@ -238,37 +233,43 @@ input:required:valid {
 }
 
 .submitBtn {
-	-webkit-appearance: none; /*remove the apple mobile default styling*/	
-	color: #fff;
-	border: solid 1px #111;
-	border-radius:7px;
-	width: 50%;
-	margin:.5em 0;
-	font-size: 1em;
-	padding: .6em;
-	background: #7d2a35; /* Old browsers */
-	box-shadow: 4px 4px 10px #666;
+    -webkit-appearance: none;
+    color: #fff;
+    border: solid 1px #51a6af;
+    width: 25%;
+    margin: .5em 0;
+    font-size: 1em;
+    padding: .6em;
+    background: #65c5d0;
+    box-shadow: 4px 4px 5px #3a7177;
 }
-
-
-
-
-
 
 
 
 
 /*----- FOOTER -----*/
+div.footerWrapper {clear: both;}
+div.footerWrapper div.left {}
+div.footerWrapper div.middle {}
 footer {
-	background-color: #b4ba6c;
-	color: #515431;
-	clear: both;
-	text-align: center;
-	padding: 1em;
-	font-size: .6em;
+  background: #363636;
+}
+footer p {
+  padding: 0.8em;
+  text-align: center;
+  font-size: 0.6em;
+  color: #a4b9eb;
+}
+footer a {
+  color: #a4b9eb;
+    
 }
 
-/* CLEAR FIX SOLUTION*/
+
+
+
+
+/*OTHER STUFF*/
 .clearfix:after {
   content: "";
   display: table;

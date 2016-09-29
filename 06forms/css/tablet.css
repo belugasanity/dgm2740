@@ -1,67 +1,91 @@
-@media only screen and (min-width: 600px) {
-	/*-----BODY -----*/
-	body {}
-
-	/*-----CONTAINER -----*/
-	#container {}
-
-	/*-----HEADER -----*/
-	header h1 {
-		font-size: 1.6em; 
-		padding:.5em;
-	}
-	header h2 {
-		font-size: 1.2em; 
-		padding:.4em;
-	}
+@media only screen and (min-width: 550px) {
+/*-----BODY -----*/
+body {}
 
 
-	/*-----NAVigation -----*/
-	nav {
-		position:relative;
-		}
-	button#showPhoneNav {
-		width: 13em;
-		position:absolute;
-		top: -5em;
-		left: 2%;
-	}
-	
-	nav ul#myNav {
-	width: 100%;
-	margin-left: 0;
-	
-	}
-	
-	/*-----CONTENT -----*/
-	#content {
 
-	}
-	
-	/*-----COLUMNS -----*/
-	div.left {
-		width: 75%;
-		float: left;	
-	}
-	aside.right {
-		width: 23%;
-		margin-right:2%;
-		margin-top:2em;
-		float: right;	
-	}
-	aside.right div.ad {
-		width: 100%;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*----- FOOTER -----*/
 
-	
-} // end of the tablet CSS
+
+/*-----CONTAINER -----*/
+#container {}
+
+
+
+
+
+/*-----HEADER -----*/
+
+
+
+
+/*-----DECORATIVE BAR -----*/
+div.decorativeWrapper{
+    display:block;
+    background-color: #363636;
+}
+div.decorativeWrapper div.left {
+    width: 25%;
+    height: .9em;
+    background-color: #363636;
+}
+
+
+
+
+/*-----NAVigation -----*/
+button#showPhoneNav { display: none;}
+nav{ width: 25%; float: left;}
+
+nav ul{
+    display: block!important; /*forces the menu to reappear on the tablet*/
+    padding: 0; 
+    margin: 0; 
+    border: none;
+    border-radius: 0;
+    box-shadow:none;
+}
+
+nav ul li a {
+    display:block;
+    padding:.6em;
+    text-decoration: none;
+    border-top: 2px dashed  rgba(255,255,255,0.2);
+    border-bottom: 2px dashed rgba(0,0,0,0.8);
+    color: rgba(255,255,255,0.8);
+    
+    background: #363636;
+}
+
+nav ul li a:hover {background: #272727;}
+nav ul li.selected a {color: #bf1e2e;}
+
+
+
+
+/*-----CONTENT -----*/
+#content {
+    margin-left: 25%;
+    min-height: 30em;
+}
+
+
+
+
+/*-----IMAGES -----*/
+figure.w50 {
+    width: 70%;
+    margin-left: 2%;
+}
+
+
+
+
+
+
+/*----- FOOTER -----*/
+div.footerWrapper {background-color: #363636;}
+div.footerWrapper div.middle {margin-left: 25%;}
+
+
+
+}
